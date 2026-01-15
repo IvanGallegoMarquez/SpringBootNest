@@ -9,11 +9,27 @@ public class User {
     private String email;
     
 
+
+    public User() {
+    }
+
     public User(String name, String lastname, Integer age, String email) {
+        this(name, lastname);
+        this.age = age;
+        this.email = email;
+    }
+
+    public User(String name, String lastname) {
+        this.name = name;
+        this.lastname = lastname;
+    }
+
+    // Constructor sin email
+    public User(String name, String lastname, Integer age) {
         this.name = name;
         this.lastname = lastname;
         this.age = age;
-        this.email = email;
+        this.email = null; // opcional
     }
     
 public String getName() {
